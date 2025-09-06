@@ -14,7 +14,7 @@ afterTransform = transform_data(products_df, transactions_df,users_df)
 # print(afterTransform)
 
 # Command Load
-save_to_csv(final_df, OUTPUT_PATH)
+save_to_csv(afterTransform, OUTPUT_PATH)
 print(f"Simple ETL Berhasil!! file disimpan di {OUTPUT_PATH}")
 
 
