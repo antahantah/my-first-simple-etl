@@ -1,0 +1,7 @@
+# PATH file input
+USERS_PATH = "data/users.json"
+PRODUCTS_PATH = "data/products.csv"
+TRANSACTIONS_PATH = "data/transactions.csv"
+
+# PATH output
+OUTPUT_PATH = "warehouse/fact_sales.csv"
