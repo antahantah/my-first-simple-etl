@@ -34,5 +34,8 @@ def transform_data(products_df, transactions_df, users_df):
     gabungan_df = transactions_df.merge(users_df, on='user_id', how='left')\
                                     .merge(products_df, on='product_id', how ='left')
     
+    # tambah column amount pembelian
+    gabungan_df['total_pembelian'] = gabungan_df['quantity'] * gabungan_df['price']
+    
     # return value
     return gabungan_df
