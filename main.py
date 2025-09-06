@@ -1,6 +1,7 @@
 from config.setting import PRODUCTS_PATH, USERS_PATH, TRANSACTIONS_PATH, OUTPUT_PATH
 from scripts.extract import ekstrak_csv, ekstrak_json
 from scripts.transform import transform_data
+from scripts.load import save_to_csv
 
 # Command Extract CSV dan JSON
 products_df = ekstrak_csv(PRODUCTS_PATH)
@@ -12,7 +13,9 @@ users_df = ekstrak_json(USERS_PATH)
 afterTransform = transform_data(products_df, transactions_df,users_df)
 # print(afterTransform)
 
-
+# Command Load
+save_to_csv(final_df, OUTPUT_PATH)
+print(f"Simple ETL Berhasil!! file disimpan di {OUTPUT_PATH}")
 
 
 
