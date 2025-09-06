@@ -8,6 +8,7 @@ transactions_df = ekstrak_csv(TRANSACTIONS_PATH)
 users_df = ekstrak_json(USERS_PATH)
 
 # Command Transform
-afterTransform = transform_data(products_df, transactions_df)
+afterTransform = transform_data(products_df, transactions_df,users_df)
 print(afterTransform)
+
 
